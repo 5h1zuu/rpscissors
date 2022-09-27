@@ -61,7 +61,8 @@ playRound(playerSelection, computerSelection)
 
 function game(){
     for (let x = 0; x < 5; x++){
-    playRound()
+        console.log(x)
+        return
     }
 }
 
