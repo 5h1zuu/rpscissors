@@ -15,3 +15,8 @@ getComputerChoice()
 
 
 let playerSelection = prompt("Type rock, paper or scissors")
+let playerSelect = playerSelection.toLowerCase()
+
+function playRound(){
+
+}
