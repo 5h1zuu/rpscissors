@@ -25,5 +25,10 @@ if (playerSelect == "rock"){
 
 
 function playRound(playerSelect, getComputerChoice){
-    
+    if (playerSelect === getComputerChoice){
+        console.log("draw")
+        return "draw"
+    }
 }
+
+playRound()
