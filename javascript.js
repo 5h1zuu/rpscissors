@@ -34,7 +34,8 @@ if (playerSelect == "rock"){
 
 
 
-function playRound(playerSelect, getComputerChoice){
+function playRound(getComputerChoice, playerSelect){
+
 
 }
 
