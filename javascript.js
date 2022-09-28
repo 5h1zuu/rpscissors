@@ -16,43 +16,60 @@ function getComputerChoice(){
 computerSelection = getComputerChoice()
 
 
-player = prompt("rock, paper or scissors")
-playerSelection = player.toLowerCase()
+
 
 
 
 function playRound(playerSelection, computerSelection){
 
     if (playerSelection == computerSelection){
-        console.log("draw")
+        
         return "draw"
     
     }if (playerSelection == "rock" && computerSelection == "scissors"){
-        console.log("player wins")
+        
         return "player wins"
 
     }else if (playerSelection == "rock" && computerSelection == "paper"){
-        console.log("computer wins")
+        
         return "computer wins"
 
     }else if (playerSelection == "paper" && computerSelection == "rock"){
-        console.log("player wins")
+        
         return "player wins"
 
     }else if (playerSelection == "paper" && computerSelection == "scissors"){
-        console.log("computer wins")
+       
         return "computer wins"
             
     }else if (playerSelection == "scissors" && computerSelection == "paper"){
-        console.log("player wins")
+        
         return "player wins"
 
     }else if(playerSelection == "scissors" && computerSelection == "rock"){
-        console.log("computer wins")
+        
         return "computer wins"
             }
     }
     
+
+let pScore = 0
+let cScore = 0
+
+function score(){
+    if (playRound (playerSelection, computerSelection) == "computer wins"){
+        cScore = cScore + 1
+        
+        return cScore
+    }else if (playRound (playerSelection, computerSelection) == "player wins"){
+        pScore = pScore + 1
+        
+        return cScore
+    }
+
+}
+
+
 
 
 
@@ -62,6 +79,8 @@ function game(){
         player = prompt("rock, paper or scissors")
         playerSelection = player.toLowerCase()
         playRound(playerSelection, computerSelection)
+        score()
+        console.log("final total for computer is " + cScore + ". final total for player is " + pScore)
         
     }
 }
