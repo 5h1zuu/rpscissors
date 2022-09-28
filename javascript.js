@@ -55,6 +55,7 @@ function playRound(playerSelection, computerSelection){
 
 let pScore = 0
 let cScore = 0
+let dScore = 0
 
 function score(){
     if (playRound (playerSelection, computerSelection) == "computer wins"){
@@ -65,6 +66,10 @@ function score(){
         pScore = pScore + 1
         
         return cScore
+    }else{
+        dScore = dScore + 1
+
+        return dScore
     }
 
 }
@@ -80,7 +85,7 @@ function game(){
         playerSelection = player.toLowerCase()
         playRound(playerSelection, computerSelection)
         score()
-        console.log("final total for computer is " + cScore + ". final total for player is " + pScore)
+        console.log("final total for computer is " + cScore + ". final total for player is " + pScore + ". final total of draws is " + dScore)
         
     }
 }
