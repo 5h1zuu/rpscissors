@@ -1,12 +1,10 @@
-
-
 function getComputerChoice(){
     let choice = Math.floor(Math.random() * 3)
     if (choice === 0){
         choice = "rock";
         return choice;
     }else if (choice === 1){
-        choice = "paper";
+        choice= "paper";
         return choice;
     }else if (choice === 2 ){
         choice = "scissors"
@@ -53,7 +51,6 @@ let cScore = 0
 let dScore = 0
 
 
-
 function score(){
     if (playRound (playerSelection, computerSelection) == "computer wins"){
         cScore = cScore + 1
@@ -85,7 +82,7 @@ function checkWinner(){
 
 function game(){
     for (let i = 0; i < 5; i++){
-        
+        getComputerChoice()
         player = prompt("rock, paper or scissors")
         playerSelection = player.toLowerCase()
         playRound(playerSelection, computerSelection)
