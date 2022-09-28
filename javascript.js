@@ -1,3 +1,4 @@
+
 function getComputerChoice(){
     let choice = Math.floor(Math.random() * 3)
     if (choice === 0){
@@ -5,17 +6,18 @@ function getComputerChoice(){
         return choice;
     }else if (choice === 1){
         choice= "paper";
-        return choice;
+         return choice;
     }else if (choice === 2 ){
         choice = "scissors"
         return choice;
     }
-    
+        
 }
 
 
-let computerSelection = getComputerChoice()
 
+
+let computerSelection = getComputerChoice()
 
 
 
@@ -82,7 +84,7 @@ function checkWinner(){
 
 function game(){
     for (let i = 0; i < 5; i++){
-        getComputerChoice()
+        console.log(computerSelection)
         player = prompt("rock, paper or scissors")
         playerSelection = player.toLowerCase()
         playRound(playerSelection, computerSelection)
