@@ -70,10 +70,7 @@ function game(){
     for(let x = 0; x < 5; x++){
         console.log(round())
         //return round()?
-        //console.log(`User points: ${userScore} Computer points: ${compScore}`)
-        
-        
-        
+        //console.log(`User points: ${userScore} Computer points: ${compScore}`)    
     }
     //return checkWinner()?
 }
