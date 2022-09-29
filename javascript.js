@@ -19,7 +19,7 @@ function getComputerChoice(){
 
 // need to create a function
 // need to get the user choice
-//function getUserChoice
+//function getUserChoice for validation
 
 
 
@@ -64,7 +64,16 @@ let round = function playRound(){
    
 }
 
-
+// display the winner
+function winner(){
+    if (userScore > compScore){
+        return "User is just better"
+    }else if (userScore < compScore){
+        return "Computer is skill diff"
+    }else{
+        return "draw"
+    }
+}
 
 
 
@@ -74,8 +83,13 @@ function game(){
         console.log(round())
         console.log(`User points: ${userScore} Computer points: ${compScore}`)
         
+        
     }
+    console.log(winner())
 }
+
+
+
 game()
 
 
@@ -94,4 +108,3 @@ game()
 
 
 
-// display the winner
