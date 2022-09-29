@@ -1,8 +1,3 @@
-
-function game(){
-    for(let x = 0; x < 5; x++){
-
-
 // need to get the computer choice
 function getComputerChoice(){
     let choice = Math.floor(Math.random() * 3)
@@ -29,7 +24,7 @@ let computerChoice = getComputerChoice()
     }else if(userChoice == "scissors"){
         return userChoice
     }else{
-        return "error, reload page"
+        return "error"
     }
 
 } */
@@ -94,11 +89,10 @@ function score(){
 
 
 // need to loop the game 5 times
-console.log(computerChoice)
-console.log(getUserChoice)
-console.log(playRound())
 
 
+function game(){
+    for(let x = 0; x < 5; x++){
 
 
     }
@@ -112,6 +106,8 @@ game()
 
 
 
-
+console.log(computerChoice)
+console.log(getUserChoice)
+console.log(playRound())
 
 // display the winner
