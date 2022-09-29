@@ -10,13 +10,13 @@ function getComputerChoice(){
     }
 }
 
-let computerChoice = getComputerChoice()
+//let computerChoice = getComputerChoice()
 
-
+// need to create a function
 // need to get the user choice
 //function getUserChoice(){
-    let user = prompt("Choose Rock, Paper or Scissors")
-    let getUserChoice = user.toLowerCase()
+    //let user = prompt("Choose Rock, Paper or Scissors")
+    //let userChoice = user.toLowerCase()
  /*   if (userChoice == "rock"){
         return userChoice
     }else if (userChoice == "paper"){
@@ -29,11 +29,14 @@ let computerChoice = getComputerChoice()
 
 } */
 
-
+//let playerChoice = getUserChoice()
 
 
 // need to create the conditions for the game
 function playRound(){
+    let computerChoice = getComputerChoice()
+    let user = prompt("Choose Rock, Paper or Scissors")
+    let getUserChoice = user.toLowerCase()
     if (computerChoice == getUserChoice){
         return "draw"
 
@@ -59,14 +62,28 @@ function playRound(){
 }
 
 
+// need to loop the game 5 times
 
+
+function game(){
+    for(let x = 0; x < 5; x++){
+        console.log(playRound())
+
+    }
+}
+
+
+
+
+
+game()
 
 
 
 
 
 // need a score system
-/*let userScore = 0
+let userScore = 0
 let compScore = 0
 
 function score(){
@@ -83,31 +100,14 @@ function score(){
     }
 }
 
-*/
-
-
-
-
-// need to loop the game 5 times
-
-
-function game(){
-    for(let x = 0; x < 5; x++){
-
-
-    }
-}
 
 
 
 
 
-game()
 
 
 
-console.log(computerChoice)
-console.log(getUserChoice)
-console.log(playRound())
+
 
 // display the winner
