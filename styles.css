@@ -1,3 +1,19 @@
 body{
     background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid;
+    height:950px;
+    gap: 15px;
+}
+
+button{
+    width: 200px;
+    height: 100px;
 }
