@@ -67,5 +67,11 @@ const buttons = document.querySelectorAll('button')
 buttons.forEach((button)=>{
     button.addEventListener('click', ()=>{
         console.log(round())
+        const container = document.querySelector("#container");
+        const content = document.createElement('div');
+        content.classList.add('content')
+        content.textContent = round()
+        container.appendChild(content)
+        return container
     });
 });
