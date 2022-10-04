@@ -8,7 +8,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: solid;
     height:950px;
     gap: 15px;
 }
