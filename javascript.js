@@ -48,6 +48,7 @@ let round = function playRound(){
         compScore +=1
         return `Computer won the round.\nUser points: ${userScore} Computer points: ${compScore}`
     }
+    
 }
 
 
@@ -72,6 +73,6 @@ buttons.forEach((button)=>{
         content.classList.add('content')
         content.textContent = round()
         container.appendChild(content)
-        return container
-    });
+    });   
 });
+
