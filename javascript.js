@@ -14,15 +14,17 @@ function getComputerChoice(){
     }
 }
 
-// need to create a function
-// need to get the user choice
-//function getUserChoice for validation
+
+let getUserChoice = ""
+
+
+
+
+
 
 // need to create the conditions for the game
 let round = function playRound(){
     let computerChoice = getComputerChoice()
-    let user = prompt("Choose Rock, Paper or Scissors")
-    let getUserChoice = user.toLowerCase()
 
 //this can be shortened
     if (computerChoice == getUserChoice){
@@ -31,6 +33,7 @@ let round = function playRound(){
     }else if (getUserChoice === "rock" && computerChoice === "scissors"){
         userScore +=1
         return `User won the round\nUser points: ${userScore} Computer points: ${compScore}`
+        
 
     }else if (getUserChoice === "rock" && computerChoice === "paper"){
         compScore +=1
@@ -55,7 +58,7 @@ let round = function playRound(){
 }
 
 // display the winner
-function checkWinner(){
+/*function checkWinner(){
     if (userScore > compScore){
         return "User is just better"
     }else if (userScore < compScore){
@@ -68,23 +71,45 @@ function checkWinner(){
 // need to loop the game 5 times
 function game(){
     for(let x = 0; x < 5; x++){
-        console.log(round())
+        
         //return round()?
         //console.log(`User points: ${userScore} Computer points: ${compScore}`)    
     }
     //return checkWinner()?
 }
 
-game()
-console.log(checkWinner())
+
+*/
+document.querySelector("#one").addEventListener("click", () =>{
+    getUserChoice = "rock"
+})
+
+document.querySelector("#two").addEventListener("click", () =>{
+    getUserChoice = "paper"
+})
 
 
+document.querySelector("#three").addEventListener("click", () =>{
+    getUserChoice = "scissors"
+})
 
 
+const container = document.querySelector('#container')
+const btn = document.querySelectorAll('button');
 
+/*btn.forEach((button) => {
+    
+    button.addEventListener('click', () => {
+        
+        const result = document.createElement('p')
+        result.textContent = round()
+        console.log(result)
+        container.appendChild(result)
+        
+        
 
-
-
-
-
+    });
+    
+});
+*/
 
