@@ -15,11 +15,7 @@ function getComputerChoice(){
 }
 
 
-getUserChoice = ""
-
-// need to create a function
-// need to get the user choice
-//function getUserChoice for validation
+let getUserChoice = ""
 
 // need to create the conditions for the game
 let round = function playRound(){
@@ -55,20 +51,21 @@ let round = function playRound(){
 }
 
 
-const btnone = document.querySelector('#one')
-btnone.addEventListener('click', () =>{
+
+const one = document.querySelector('#one')
     getUserChoice = "rock"
-    round()
-})
 
-const btntwo = document.querySelector('#two')
-btntwo.addEventListener('click', () =>{
+const two = document.querySelector('#two')
     getUserChoice = "paper"
-    round()
-})
 
-const btnthree = document.querySelector('#three')
-btnthree.addEventListener('click', () =>{
+const three = document.querySelector('#three')
     getUserChoice = "scissors"
-    round()
-})
+
+
+
+const buttons = document.querySelectorAll('button')
+buttons.forEach((button)=>{
+    button.addEventListener('click', ()=>{
+        console.log(round())
+    });
+});
