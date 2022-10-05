@@ -16,3 +16,9 @@ button{
     width: 200px;
     height: 100px;
 }
+
+#score{
+    display: flex;
+    justify-content: flex-end;
+    padding: 50px;
+}
