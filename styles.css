@@ -1,7 +1,10 @@
 body{
-    background-color: aquamarine;
     display: flex;
     flex-direction: column;
+    text-align: center;
+    background-image: url(images/rps.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .box{
@@ -19,3 +22,26 @@ button{
     height: 100px;
 }
 
+#score, #comp, #won{
+    font-size: 50px;
+}
+
+
+
+.fold{
+    display: flex;
+    flex-direction: column;
+    height: 650px;
+    width: 500px;
+    background-color:darkgrey;
+    padding: 75px;
+}
+
+
+.big{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 900px;
+}
