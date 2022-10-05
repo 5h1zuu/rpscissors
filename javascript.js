@@ -3,7 +3,7 @@ let userScore = 0
 console.log(`User points: ${userScore} Computer points: ${compScore}`)
 
 // need to get the computer choice
-function getComputerChoice(){
+function getComputer(){
     let choice = Math.floor(Math.random() * 3)
     if (choice == 0){
         return "rock"
@@ -14,65 +14,72 @@ function getComputerChoice(){
     }
 }
 
-
 let getUserChoice = ""
 
-// need to create the conditions for the game
-let round = function playRound(){
-    let computerChoice = getComputerChoice()
-//this can be shortened
-    if (computerChoice == getUserChoice){
-        return `draw\nUser points: ${userScore} Computer points: ${compScore}`
+let score = document.getElementById('score')
+let roundwin = document.getElementById('roundwin')
 
-    }else if (getUserChoice === "rock" && computerChoice === "scissors"){
-        userScore +=1
-        return `User won the round\nUser points: ${userScore} Computer points: ${compScore}`
 
-    }else if (getUserChoice === "rock" && computerChoice === "paper"){
-        compScore +=1
-        return `Computer won the round.\nUser points: ${userScore} Computer points: ${compScore}`
 
-    }else if (getUserChoice === "paper" && computerChoice === "rock"){
-        userScore +=1
-        return `User won the round\nUser points: ${userScore} Computer points: ${compScore}`
 
-    }else if (getUserChoice === "paper" && computerChoice === "scissors"){
-        compScore +=1
-        return `Computer won the round.\nUser points: ${userScore} Computer points: ${compScore}`
 
-    }else if (getUserChoice === "scissors" && computerChoice === "paper"){
-        userScore +=1
-        return `User won the round\nUser points: ${userScore} Computer points: ${compScore}`
+let rockbtn = document.getElementById('one')
+rockbtn.addEventListener('click', () => {
+    getUserChoice = "rock"
+    getComputer()
+    round()
+})
 
-    }else if (getUserChoice === "scissors" && computerChoice === "rock"){
-        compScore +=1
-        return `Computer won the round.\nUser points: ${userScore} Computer points: ${compScore}`
+let paperbtn = document.getElementById('two')
+paperbtn.addEventListener('click', () => {
+    getUserChoice = "paper"
+    getComputer()
+    round()
+})
+
+let scissorsbtn = document.getElementById('three')
+scissorsbtn.addEventListener('click', () => {
+    getUserChoice = "scissors"
+    getComputer()
+    round()
+})
+
+
+let draw = document.createElement('p')
+draw.textContent = "Draw"
+
+let win = document.createElement('p')
+win.textContent = "You won"
+
+let lose = document.createElement('p')
+lose.textContent = "You lose"
+
+
+
+
+function round(){
+    if (getUserChoice == getComputer()){
+        roundwin.append(draw)
+
+    }else if (getUserChoice === "rock" && getComputer() === "scissors"){
+        roundwin.append(win)
+
+    }else if (getUserChoice === "rock" && getComputer() === "paper"){
+        roundwin.append(lose)
+
+    }else if (getUserChoice === "paper" && getComputer() === "rock"){
+        roundwin.append(win)
+
+    }else if (getUserChoice === "paper" && getComputer() === "scissors"){
+        roundwin.append(lose)
+
+    }else if (getUserChoice === "scissors" && getComputer() === "paper"){
+        roundwin.append(win)
+
+    }else if (getUserChoice === "scissors" && getComputer() === "rock"){
+        roundwin.append(lose)
     }
-    
 }
 
 
-
-const one = document.querySelector('#one')
-    getUserChoice = "rock"
-
-const two = document.querySelector('#two')
-    getUserChoice = "paper"
-
-const three = document.querySelector('#three')
-    getUserChoice = "scissors"
-
-
-
-const buttons = document.querySelectorAll('button')
-buttons.forEach((button)=>{
-    button.addEventListener('click', ()=>{
-        console.log(round())
-        const container = document.querySelector("#container");
-        const content = document.createElement('div');
-        content.classList.add('content')
-        content.textContent = round()
-        container.appendChild(content)
-    });   
-});
 
