@@ -45,3 +45,24 @@ button{
     align-items: center;
     height: 900px;
 }
+
+#one{
+    width: 94px;
+    background: url(images/rock.jpg);
+    background-repeat: no-repeat;
+    background-size: 94px 
+}
+
+#two{
+    width: 100px;
+    background: url(images/paper.jpg);
+    background-repeat: no-repeat;
+    background-size: 100px;
+}
+
+#three{
+    width: 100px;
+    background: url(images/scissors.jpg);
+    background-repeat: no-repeat;
+    background-size: 100px;
+}
